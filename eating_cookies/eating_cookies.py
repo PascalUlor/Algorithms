@@ -31,6 +31,21 @@ def eating_cookies(n, cache=None):
         print(cache[n])
         return cache[n]
 
+# def eating_cookies(n):
+#     variations_of_ways = [0, 1, 2, 3]
+#     number_of_ways = [0] * (n + 1)
+
+#     #set base case for number of ways to eat 0 cookies
+#     number_of_ways[0] = 1
+#     for ways_to_eat_cookies in range(1, len(variations_of_ways)):
+#         for max_cookies_taken in range(ways_to_eat_cookies, n+1):
+#             left_over = max_cookies_taken - ways_to_eat_cookies
+#             number_of_ways[max_cookies_taken] += number_of_ways[left_over]
+#     return number_of_ways[n]
+
+
+print(eating_cookies(3))
+
 
 
 if __name__ == "__main__":
