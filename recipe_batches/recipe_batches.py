@@ -10,24 +10,24 @@
 
 import math
 
-def recipe_batches(recipe, ingredients):
+def recipe_batches(recipe, ingredients): # O(n)
   # pass 
   cart = dict()
   batch = 0
   # check if all ingredient needed are availble for recipe
-  recipe_keys = list(recipe.keys())
-  ingredients_keys = list(ingredients.keys())
+  recipe_keys = list(recipe.keys()) # O(1)
+  ingredients_keys = list(ingredients.keys()) # O(1)
   if len(recipe_keys) != len(ingredients_keys):
-    return batch
+    return batch # O(1)
   else:
-    for (key, value) in recipe.items():
+    for (key, value) in recipe.items():# O(n)
     # Check if key is in recipe and add pair to new dictionary
       if key in list(recipe.keys()):
-        qty = ingredients[key] // value
-        cart[key] = qty
-    batch = sorted(list(cart.values()))[0]
-    print(batch)
-    return batch
+        qty = ingredients[key] // value #(1)
+        cart[key] = qty #(1)
+    batch = sorted(list(cart.values()))[0] #(n)
+    # print(cart)
+    return batch #(1)
 
 if __name__ == '__main__':
   # Change the entries of these dictionaries to test 
