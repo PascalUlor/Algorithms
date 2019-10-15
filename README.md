@@ -1,4 +1,4 @@
-## Ulor Pascal
+## Ulor Pascal PR
 # Algorithms
 
 Each directory contains a separate problem that you'll be tasked with solving.
